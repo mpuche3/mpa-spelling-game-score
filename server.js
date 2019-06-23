@@ -3,8 +3,6 @@ var http = require('http');
 var path = require('path');
 var socketio = require('socket.io');
 var express = require('express');
-const cors = require('cors');
-var Request = require("request");
 var MongoClient = require('mongodb').MongoClient;
 
 const url = "mongodb://admin:admin@ds121309.mlab.com:21309/spelling-game";
@@ -13,7 +11,6 @@ const mLabDb = "spelling-game";
 var router = express();
 var server = http.createServer(router);
 router.use(express.static(path.resolve(__dirname, 'client')));
-router.use(cors());
 
 var io = socketio.listen(server);
 
