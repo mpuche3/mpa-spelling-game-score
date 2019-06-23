@@ -1,0 +1,105 @@
+
+textarea, input[type="text"], input[type="button"], input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+}
+
+body{
+    text-align: center;
+    
+}
+
+
+#welcome {
+    text-align:center;
+    font-size: 50px;
+}
+
+#startGame {
+    margin: auto auto auto auto;
+    background-color: rgb(100, 200, 100);
+    border: none;
+    color: white;
+    width: 200px;
+    height: 70px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#score {
+    display:block;
+	font-family: 'Consolas';
+	height: 10px;
+	text-align: center;
+	font-size: 20px;
+    margin-top: 20px;
+}
+
+#word {
+    display:block;
+	font-family: 'Consolas';
+	height: 80px;
+	text-align: center;
+	font-size: 50px;
+    margin: auto auto auto auto;
+}
+
+#definition {
+    width: 330px;
+	text-align: center;
+    margin: 10px auto;
+    display: block;
+}
+
+.letters {
+    margin-bottom: 4px;
+}
+
+.letter {
+	font-family: 'Consolas';
+    background-color: rgb(200, 200, 200);
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    width: 65px;
+    height: 65px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    border-radius: 0;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.letter:hover {
+    border:solid 3px gray;
+}
+
+
+#image {
+    max-width: 450px;
+    width: 90%;
+    margin: 0px auto;
+    display: none;
+}
+
+.bonus {
+	font-family: 'Consolas';
+    background-color: rgb(100, 100, 100);
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    width: 65px;
+    height: 65px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    border-radius: 0;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(50, 50, 50);;
+}

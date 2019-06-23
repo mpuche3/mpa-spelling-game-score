@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <title>Spelling Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="welcomeScreen">
+      <p id="welcome">Welcome to Spelling Game</p>
+      <input id = "startGame" type="button"   value="start" style="display:none" >
+    </div>
+    <div id="gameScreen" style="display:none">
+      <div id="scoreContainer">
+        <p id="score">
+          score: 100
+        </p>
+      </div>
+      <div id="wordContainer">
+        <p id="word" class="word">
+        </p>
+      </div>
+      <div id="lettersContainer">
+        <div class="letters">
+          <input class = "letter" type="button" id = "bttn_1"  value="1" >
+          <input class = "letter" type="button" id = "bttn_2"  value="2" >
+          <input class = "letter" type="button" id = "bttn_3"  value="3" >
+          <input class = "letter" type="button" id = "bttn_4"  value="4" >
+          <input class = "letter" type="button" id = "bttn_5"  value=" " >
+        </div>
+        <div class="letters">       
+          <input class = "letter" type="button" id = "bttn_6"  value=" " >
+          <input class = "letter" type="button" id = "bttn_7"  value=" ">
+          <input class = "letter" type="button" id = "bttn_8"  value=" ">
+          <input class = "letter" type="button" id = "bttn_9"  value=" ">
+          <input class = "letter" type="button" id = "bttn_10" value=" ">
+        </div>
+        <div class="letters">   
+          <input class = "letter" type="button" id = "bttn_11" value=" ">
+          <input class = "letter" type="button" id = "bttn_12" value=" ">
+          <input class = "letter" type="button" id = "bttn_13" value=" ">
+          <input class = "letter" type="button" id = "bttn_14" value=" ">
+          <input class = "letter" type="button" id = "bttn_15" value=" ">
+        </div>
+        <div class="letters">   
+          <button class="bonus" id = "bonusAdd"><i class='material-icons'>add</i></button>
+          <button class="bonus" id = "bonusPronounce"><i class='material-icons'>hearing</i></button>
+          <button class="bonus" id = "bonusFlash"><i class='material-icons'>flash_on</i></button>
+          <button class="bonus" id = "bonusImage"><i class='material-icons'>image</i></button>
+          <button class="bonus" id = "bonusRefresh"><i class='material-icons'>refresh</i></button>
+        </div>
+      </div>
+      <div id="imageContainer">
+        <img id = "image">
+      </div>   
+      <div id="definitionContainer">
+        <p id = "definition">
+        </p>  
+      </div >
+    </div>
+    <div id="sounds">
+      <audio id="sound" src="/sounds/blop.mp3" autostart="false" ></audio>
+    </div>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </body>
+</html>
