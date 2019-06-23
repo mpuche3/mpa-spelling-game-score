@@ -1,7 +1,7 @@
 let socket = {};
 let word = {};
 let DOM = {};
-const url = "https://spelling-game-score-mpuche3.c9users.io/pics/";
+const url = "https://spelling-game.herokuapp.com/pics/";
 window.onload = function () {
 
     socket = (function () {

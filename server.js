@@ -1,23 +1,22 @@
 
-// Server
-const folder = './client/pics/';
-const websiteUrl = 'https://spelling-game-score-mpuche3.c9users.io/pics/';
-const fs = require('fs');
 var http = require('http');
 var path = require('path');
-var async = require('async');
 var socketio = require('socket.io');
 var express = require('express');
-var router = express();
-var server = http.createServer(router);
-var io = socketio.listen(server);
-router.use(express.static(path.resolve(__dirname, 'client')));
+const cors = require('cors');
 var Request = require("request");
 var MongoClient = require('mongodb').MongoClient;
+
 const url = "mongodb://admin:admin@ds121309.mlab.com:21309/spelling-game";
 const mLabDb = "spelling-game";
-const cors = require('cors');
+
+var router = express();
+var server = http.createServer(router);
+router.use(express.static(path.resolve(__dirname, 'client')));
 router.use(cors());
+
+var io = socketio.listen(server);
+
 
 // Server Listen
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
@@ -94,7 +93,7 @@ function updateScore(fileName, score){
     var dbo = db.db(mLabDb);
     var myquery = { fileName: fileName };
     var newvalues = { $set: {score: score } };
-    dbo.collection("words").updateMany(myquery, newvalues, { upsert: true }, function(err, res) {
+    dbo.collection("words").updateMany(myquery, newvalues, { upsert: true }, function(err) {
       if (err) throw err;
       console.log("1 document updated");
       db.close();
